@@ -1,0 +1,16 @@
+---
+# tasks file for mywebapplaunch
+- name: Installing httpd package 
+  package:
+       name: httpd
+       state: present 
+
+- name: Copying the content into webpage 
+  copy:
+          content: "welcome from {{ ansible_hostname }}"
+          dest: /var/www/html/index.html
+
+- name: Starting the httpd service 
+  service:
+          name: httpd
+          state: started 
