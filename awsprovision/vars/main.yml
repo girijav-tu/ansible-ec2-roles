@@ -1,0 +1,10 @@
+---
+# vars file for awsprovision
+mykey: "AnsibleKey"
+mygroup_id: "sg-06530ec2141fd967e"
+myimage: "ami-0bcf5425cdc1d8a85"
+myvpc_subnet_id: "subnet-49770905"
+myregion: "ap-south-1"
+myinstancetype: "t2.micro"
+myaccesskey: "AKIAY5DXZPUNEQ72XL7T"
+mysecretkey: "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"

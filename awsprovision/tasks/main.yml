@@ -1,0 +1,19 @@
+---
+# tasks file for awsprovision
+- name: Provisioning the EC2 instances 
+  ec2:
+          key_name: "{{ mykey }}"
+          group_id: "{{ mygroup_id }}"
+          image: "{{ myimage }}" 
+          wait: true
+          count: "{{ num }}"
+          vpc_subnet_id: "{{ myvpc_subnet_id }}"
+          assign_public_ip: yes 
+          region: "{{ myregion }}"
+          instance_tags:
+                  Name: "{{ tag_Name }}"
+          instance_type: "{{ myinstancetype }}"
+          state: present 
+          aws_access_key: "{{ myaccesskey }}"
+          aws_secret_key: "{{ mysecretkey }}" 
+

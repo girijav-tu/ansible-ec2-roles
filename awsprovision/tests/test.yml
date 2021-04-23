@@ -1,0 +1,8 @@
+---
+- hosts: localhost 
+  roles:
+    - awsprovision
+
+- hosts: "tag_Name_myweb"
+  roles:
+    - mywebapplaunch 
